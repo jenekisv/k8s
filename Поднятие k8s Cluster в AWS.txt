@@ -1,0 +1,54 @@
+Поднятие k8s Cluster в AWS на Ubuntu:
+
+Установка AWS:
+- sudo su
+- pip3 install awscli --upgrade
+- aws version
+
+Установка eksctl:
+- mkdir /kubernetes
+- cd /kubernetes
+- curl -sLO "https://github.com/eksctl-io/eksctl/releases/latest/download/eksctl_$(uname -s)_amd64.tar.gz"
+- tar -xf eksctl_Linux_amd64.tar.gz
+- rm eksctl_Linux_amd64.tar.gz
+- eksctl version
+
+Установка kubectl:
+- curl -LO https://dl.k8s.io/release/`curl -LS https://dl.k8s.io/release/stable.txt`/bin/linux/amd64/kubectl
+- chmod +x kubectl
+- kubectl version --client
+
+Добавление в системные переменные:
+- echo "export PATH=$PATH:/kubernetes/" >> /etc/bash.bashrc
+- exit
+- sudo reboot now
+
+Аутентификация на AWS:
+- export aws_access_key_id=AKIA....
+- export aws_secret_access_key=0EZrVe....
+export aws_default_region=us-east-1
+
+Проверка:
+- aws s3 ls
+
+Поднятие кластера K8s:
+- eksctl create cluster --name evgen
+
+Проверка:
+- В AWS EKS появился кластер evgen V Active
+- В AWS EC2 появились 2 instances V Running
+- Конфигурация сохраняется на Ubuntu с которой запускался eksctl
+  /home/evgeniyisv/.kube/config
+
+Запускаем команды:
+- kubectl cluster-info
+- kubectl get nodes
+
+Удаление кластера:
+- eksctl delete cluster --name evgen
+
+Поднятие кластера K8s из файла:
+- eksctl create cluster -f mycluster.yaml
+
+Запускаем команды:
+- kubectl get nodes
