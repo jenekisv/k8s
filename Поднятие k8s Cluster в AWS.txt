@@ -1,3 +1,11 @@
+Команды:
+kubectl get componentstatuses
+kubectl cluster-info
+kubectl cluster-info dump
+kubectl config view
+kubectl get nodes
+kubectl version
+kubectl version --client
 Поднятие k8s Cluster в AWS на Ubuntu:
 
 Установка AWS:
