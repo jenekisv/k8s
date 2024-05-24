@@ -9,4 +9,6 @@
 ![image](https://github.com/jenekisv/k8s/assets/38710485/e36c4e11-5fb9-4426-9286-bfcdd54f6b5c)
 5 Проверяем созданные instances:
 ![image](https://github.com/jenekisv/k8s/assets/38710485/44a60770-cd0b-42a8-9b13-6ba3fd428937)
-6--------------------------------------
+6 Смотрим инфу:
+![image](https://github.com/jenekisv/k8s/assets/38710485/75629632-efbd-48af-91a1-1cf7aec5dd6e)
+7 Удаление кластера k8s:
