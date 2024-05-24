@@ -12,3 +12,4 @@
 6 Смотрим инфу:
 ![image](https://github.com/jenekisv/k8s/assets/38710485/75629632-efbd-48af-91a1-1cf7aec5dd6e)
 7 Удаление кластера k8s:
+![image](https://github.com/jenekisv/k8s/assets/38710485/9b90ab50-1978-4711-84dd-1b0dd0bb96a0)
